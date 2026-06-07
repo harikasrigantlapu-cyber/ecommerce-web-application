@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- LOGIN MODAL -->
+
+<div class="login-modal" id="loginModal">
+
+<div class="login-box">
+
+<h2>Login</h2>
+
+<input
+type="text"
+id="username"
+placeholder="Username">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<button onclick="loginUser()">
+Login
+</button>
+
+</div>
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h2>Harika Store</h2>
+
+<div class="nav-right">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Products"
+onkeyup="searchProducts()">
+
+<button onclick="toggleCart()">
+
+<i class="fas fa-shopping-cart"></i>
+
+Cart (<span id="cartCount">0</span>)
+
+</button>
+
+</div>
+
+</nav>
+
+<!-- FILTERS -->
+
+<div class="filters">
+
+<button onclick="filterProducts('all')">
+All
+</button>
+
+<button onclick="filterProducts('electronics')">
+Electronics
+</button>
+
+<button onclick="filterProducts('accessories')">
+Accessories
+</button>
+
+</div>
+
+<!-- PRODUCTS -->
+
+<div class="products" id="productContainer">
+
+</div>
+
+<!-- CART -->
+
+<div class="cart" id="cart">
+
+<div style="display:flex;justify-content:space-between;align-items:center;">
+
+<h2>Your Cart</h2>
+
+<button
+class="close-cart"
+onclick="toggleCart()">
+
+✖
+
+</button>
+
+</div>
+
+<div id="cartItems"></div>
+
+<h3>
+Total: ₹ <span id="totalPrice">0</span>
+</h3>
+
+<button class="checkout" onclick="checkout()">
+Proceed to Checkout
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
